@@ -17,6 +17,8 @@ document.onkeydown=function(e)
         const CANVAS_H=SCREEN_H;
 
         //
+        let can = document.getElementById("can");
+        let con = can.getContext("2d");
 
 
     }
