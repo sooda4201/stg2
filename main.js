@@ -1,7 +1,7 @@
 //document.onkeydown=function(e)
-{
+
    // switch(e.keycode)
-    {
+    
      //   case 32:
             
         //ゲームスピード(ms)
@@ -82,7 +82,7 @@
                 }
             }
         }
-        
+
         //ゲーム初期化
         function gameInit()
         {
@@ -109,5 +109,4 @@
         {
             gameInit();
         }
-//    }
-//}
+
