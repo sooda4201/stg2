@@ -3,6 +3,7 @@ document.onkeydown=function(e)
     switch(e.keycode)
     {
         case 32:
+            
         //ゲームスピード(ms)
         const GAME_SPEED=1000/60;
 
@@ -30,8 +31,8 @@ document.onkeydown=function(e)
         //フィールド（仮想画面）
         let vcan=document.createElement("canvas");
         let vcon=vcan.getContext("2d");
-        can.width=FIELD_W;
-        can.height=FIELD_H;
+        vcan.width=FIELD_W;
+        vcan.height=FIELD_H;
 
         //カメラの座標
         let camera_x=0;
@@ -54,7 +55,7 @@ document.onkeydown=function(e)
                 this.x=rand(0,FIELD_W)<<8;
                 this.y=rand(0,FIELD_H)<<8;
                 this.vx=0;
-                this.vy=rand(30,500);
+                this.vy=rand(30,200);
                 this.sz=rand(1,2);
             }
 
@@ -66,14 +67,14 @@ document.onkeydown=function(e)
                 if(x<camera_x||x>=camera_x+SCREEN_W
                     ||y<camera_y||y>=camera_y+SCREEN_H)return;
 
-                vcon.fillStyle=(rand(0,2)!=0)?"#66f":"#8af";
+                vcon.fillStyle=rand(0,2)!=0?"#66f":"#8af";
                 vcon.fillRect(x,y,this.sz,this.sz);
             }
 
             update()
             {
                 this.x+=this.vx;
-                this.x+=this.vy;
+                this.y+=this.vy;
                 if(this.y>FIELD_H<<8)
                 {
                     this.y=0;
@@ -81,18 +82,18 @@ document.onkeydown=function(e)
                 }
             }
         }
-
+        //ゲーム初期化
         function gameInit()
         {
-        for(let i=0;i<STAR_MAX;i++)star[i]=new Star();
+        for(let i=0;i<STAR_MAX;i++)star[i]=new star();
         setInterval(gameLoop,GAME_SPEED);
         }
-        //
+        //ゲームループ
         function gameLoop()
         {
-            //
+            //移動の処理
             for (let i=0;i<STAR_MAX;i++)star[i].update();
-            //
+            //描画の処理
             vcon.fillStyle="black";
             vcon.fillRect(0,0,SCREEN_W,SCREEN_H);
 
@@ -102,7 +103,7 @@ document.onkeydown=function(e)
 	        con.drawImage( vcan ,camera_x,camera_y,SCREEN_W,SCREEN_H,0,0,CANVAS_W,CANVAS_H);
         }
 
-        //
+        //オンロードでゲーム開始
         window.onload=function()
         {
             gameInit();
