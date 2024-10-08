@@ -1,8 +1,8 @@
-document.onkeydown=function(e)
+//document.onkeydown=function(e)
 {
-    switch(e.keycode)
+   // switch(e.keycode)
     {
-        case 32:
+     //   case 32:
             
         //ゲームスピード(ms)
         const GAME_SPEED=1000/60;
@@ -108,5 +108,5 @@ document.onkeydown=function(e)
         {
             gameInit();
         }
-    }
-}
+//    }
+//}
