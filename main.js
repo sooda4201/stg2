@@ -15,7 +15,7 @@
         const CANVAS_W=SCREEN_W*2;
         const CANVAS_H=SCREEN_H*2;
 
-        //スクリーンサイズ
+        //フィールドサイズ
         const FIELD_W=SCREEN_W*2;
         const FIELD_H=SCREEN_H*2;
 
@@ -41,7 +41,7 @@
         //星の実体
         let star=[];
 
-        //複数のランダムを作る
+        //整数のランダムを作る
         function rand(min,max)
         {
             return Math.floor(Math.random()*(max-min+1))+min;
@@ -82,6 +82,7 @@
                 }
             }
         }
+        
         //ゲーム初期化
         function gameInit()
         {
