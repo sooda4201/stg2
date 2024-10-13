@@ -86,7 +86,7 @@
         //ゲーム初期化
         function gameInit()
         {
-        for(let i=0;i<STAR_MAX;i++)star[i]=new Star();
+        for(let i=0;i<STAR_MAX;i++)star[i]=new star();
         setInterval(gameLoop,GAME_SPEED);
         }
         //ゲームループ
