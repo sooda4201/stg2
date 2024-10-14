@@ -1,4 +1,3 @@
-
 //画面サイズ
 const SCREEN_W=180;
 const SCREEN_H=320;
