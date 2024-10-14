@@ -39,8 +39,11 @@ class Star
 
     draw()
     {
-       con.fillStyle=rand(0,2)!=0?"66f":"#8af";
-       con.fillRect(this.x>>8,this.y>>8,this.sz,this.sz)
+        let x=this.x>>8;
+        let y=this.y>>8;
+
+       vcon.fillStyle=rand(0,2)!=0?"66f":"#8af";
+       vcon.fillRect(x,y,this.sz,this.sz)
     }
 
     update()
@@ -57,8 +60,8 @@ class Star
 
 
 let star=[];
-for(let i=0;1<STAR_MAX;1++)star[i]= new Star();
+for(let i=0;1<STAR_MAX;i++)star[i]= new Star();
 
-con.fillStyle="black";
-con.fillRect(0,0,SCREEN_W,SCREEN_H);
-for(let i=0;1<STAR_MAX;1++)star[i].draw();
+vcon.fillStyle="black";
+vcon.fillRect(0,0,SCREEN_W,SCREEN_H);
+for(let i=0;1<STAR_MAX;i++)star[i].draw();
