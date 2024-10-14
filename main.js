@@ -1,9 +1,4 @@
-//document.onkeydown=function(e)
 
-   // switch(e.keycode)
-    
-     //   case 32:
-            
         //ゲームスピード(ms)
         const GAME_SPEED=1000/60;
 
