@@ -19,6 +19,7 @@ let con = can.getContext("2d");
 can.width=CANVAS_W;
 can.height=CANVAS_H;
 
+//整数の乱数を取得
 function rand(min,max)
 {
     return Math.floor(Math.random()*(max-min+1))+min;
@@ -32,7 +33,7 @@ class Star
         this.x=rand(0,FIELD_W)<<8;
         this.y=rand(0,FIELD_H)<<8;
         this.vx=0;
-        this.vy=rand(30,200);
+        this.vy=rand(30,500);
         this.sz=rand(1,2);
     }
 
