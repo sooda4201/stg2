@@ -39,11 +39,11 @@ class Star
 
     draw()
     {
-        let x=this.x>>8;
-        let y=this.y>>8;
+        //let x=this.x>>8;
+        //let y=this.y>>8;
 
-       con.fillStyle=(rand(0,2)!=0)?"66f":"#8af";
-       con.fillRect(x,y,this.sz,this.sz);
+       con.fillStyle=rand(0,2)!=0?"66f":"#8af";
+       con.fillRect(this.x>>8,this.y>>8,this.sz,this.sz);
     }
 
     update()
