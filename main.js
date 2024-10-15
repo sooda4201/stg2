@@ -58,7 +58,6 @@ class Star
     }
 }
 
-
 let star=[];
 for(let i=0;1<STAR_MAX;i++)star[i]= new Star();
 
