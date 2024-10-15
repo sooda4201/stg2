@@ -42,7 +42,7 @@ class Star
         let x=this.x>>8;
         let y=this.y>>8;
 
-       vcon.fillStyle=rand(0,2)!=0?"66f":"#8af";
+       vcon.fillStyle=(rand(0,2)!=0)?"66f":"#8af";
        vcon.fillRect(x,y,this.sz,this.sz)
     }
 
