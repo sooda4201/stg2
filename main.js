@@ -41,8 +41,8 @@ class Star
         let x=this.x>>8;
         let y=this.y>>8;
 
-        vcon.fillStyle = rand(0, 2) != 0?"#66f" : "#8af" ;
-        vcon.fillRect(x, y, this.sz,this.sz);
+        con.fillStyle = rand(0, 2) != 0?"#66f" : "#8af" ;
+        con.fillRect(x, y, this.sz,this.sz);
 
     }
 
@@ -63,7 +63,7 @@ class Star
 let star = [];
 for (let i=0; i<STAR_MAX ; i++) star[i] = new Star();
 
-vcon.fillStyle = "black";
-vcon.fillRect(0, 0, SCREEN_W, SCREEN_H);
+con.fillStyle = "black";
+con.fillRect(0, 0, SCREEN_W, SCREEN_H);
 
 for (let i=0; i<STAR_MAX ; i++) star[i] .draw();
