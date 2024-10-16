@@ -33,7 +33,7 @@ class Star
         this.x=rand(0,FIELD_W)<<8;
         this.y=rand(0,FIELD_H)<<8;
         this.vx=0;
-        this.vy=rand(20,300);
+        this.vy=rand(30,500);
         this.sz=rand(1,2);
     }
 
