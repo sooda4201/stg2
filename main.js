@@ -13,11 +13,6 @@ const FIELD_H = SCREEN_H *2;
 // 星の数
 const STAR_MAX = 300;
 
-//星の実体
-let star = [];
-for (let i=0; i<STAR_MAX ; i++) star[i] = new star();
-
-
 // キャンバス
 let can = document.getElementById("can");
 let con = can.getContext("2d");
@@ -46,7 +41,7 @@ class Star
         let x=this.x>>8;
         let y=this.y>>8;
 
-        vcon.fillStyle = (rand(0, 2) != 0)?"#66f" : "#8af" ;
+        vcon.fillStyle = rand(0, 2) != 0?"#66f" : "#8af" ;
         vcon.fillRect(x, y, this.sz,this.sz);
 
     }
@@ -64,6 +59,9 @@ class Star
     }
 }
 
+//星の実体
+let star = [];
+for (let i=0; i<STAR_MAX ; i++) star[i] = new Star();
 
 vcon.fillStyle = "black";
 vcon.fillRect(0, 0, SCREEN_W, SCREEN_H);
